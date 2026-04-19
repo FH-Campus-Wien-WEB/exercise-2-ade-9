@@ -38,7 +38,7 @@ app.put('/movies/:imdbID', function (req, res) {
 
   if (movieModel.movies[requestedID]) {
     movieModel.movies[requestedID] = updatedMovieData;
-    res.status(200).json(movieModel.movies[requestedID]);
+    res.sendStatus(200);
   } else {
     movieModel.movies[requestedID] = updatedMovieData;
     res.status(201).json(movieModel.movies[requestedID]);
